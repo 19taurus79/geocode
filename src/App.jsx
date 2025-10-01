@@ -2,7 +2,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import css from "./App.module.css";
 import TopData from "./components/topData/topData";
-import InputAddress from "./components/inputAddress/inputAdress";
+import InputAddress from "./components/inputAddress/InputAddress";
 import BottomData from "./components/bottomData/bottomData";
 import { useDisplayAddressStore } from "./store/displayAddress";
 import ChangeMapView from "./components/ChangeMapView/ChangeMapView";

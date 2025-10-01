@@ -6,6 +6,7 @@
   width: 300px;
   box-sizing: border-box;
   transition: border-color 0.3s, box-shadow 0.3s;
+  margin-bottom: 10px; /* Added margin-bottom */
 }
 
 .input:focus {
@@ -16,7 +17,7 @@
 
 .button {
   padding: 10px 20px;
-  margin-left: 15px;
+  /* margin-left: 15px; */ /* Removed margin-left */
   font-size: 16px;
   background-color: #5b9bd5;
   color: #fff;
@@ -31,7 +32,8 @@
 }
 .container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Changed to column */
+  /* justify-content: space-between; */ /* Removed */
   /* align-items: center; */
   /* margin-top: 20px; */
 }
