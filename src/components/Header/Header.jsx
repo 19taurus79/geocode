@@ -14,6 +14,8 @@ export default function Header({
   isDataTopVisible,
   onToggleAddressSearch,
   isAddressSearchVisible,
+  onToggleApplications,
+  areApplicationsVisible,
 }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -33,6 +35,11 @@ export default function Header({
 
   const handleToggleAddress = () => {
     onToggleAddressSearch();
+    handleClose();
+  };
+
+  const handleToggleApps = () => {
+    onToggleApplications();
     handleClose();
   };
 
@@ -66,6 +73,9 @@ export default function Header({
               {isAddressSearchVisible
                 ? "Скрыть поиск адреса"
                 : "Показать поиск адреса"}
+            </MenuItem>
+            <MenuItem onClick={handleToggleApps}>
+              {areApplicationsVisible ? "Скрыть заявки" : "Показать заявки"}
             </MenuItem>
           </Menu>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
