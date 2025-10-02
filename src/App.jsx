@@ -9,6 +9,8 @@ import ChangeMapView from "./components/ChangeMapView/ChangeMapView";
 import Header from "./components/Header/Header";
 import { useState, useRef, useEffect } from "react";
 
+import { customIcon } from "./leaflet-icon";
+
 export default function App() {
   const { addressData } = useDisplayAddressStore();
   const [isDataTopVisible, setDataTopVisible] = useState(false);
@@ -64,6 +66,7 @@ export default function App() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker
+          icon={customIcon}
           position={
             addressData.lat
               ? [addressData.lat, addressData.lon]
