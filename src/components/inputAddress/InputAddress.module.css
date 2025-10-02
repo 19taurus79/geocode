@@ -1,12 +1,12 @@
 .input {
-  padding: 10px 15px;
+  padding: 10px 35px 10px 15px; /* Adjusted padding-right for the button */
   font-size: 16px;
   border-radius: 6px;
   border: 1px solid #ccc;
-  width: 300px;
+  width: 100%;
   box-sizing: border-box;
   transition: border-color 0.3s, box-shadow 0.3s;
-  margin-bottom: 10px; /* Added margin-bottom */
+  margin-bottom: 0; /* Removed margin-bottom from input, now handled by inputWrapper */
 }
 
 .input:focus {
@@ -15,9 +15,33 @@
   outline: none;
 }
 
+.inputWrapper {
+  position: relative;
+  /* display: flex; */ /* Removed flex, input will take full width */
+  /* align-items: center; */
+  margin-bottom: 10px;
+}
+
+.clearButton {
+  position: absolute;
+  right: 15px; /* Adjusted right position */
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #aaa;
+  padding: 0; /* Remove default button padding */
+  line-height: 1; /* Ensure consistent vertical alignment */
+}
+
+.clearButton:hover {
+  color: #333;
+}
+
 .button {
   padding: 10px 20px;
-  /* margin-left: 15px; */ /* Removed margin-left */
   font-size: 16px;
   background-color: #5b9bd5;
   color: #fff;
@@ -25,15 +49,10 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .button:hover {
   background-color: #477ab9;
-}
-.container {
-  display: flex;
-  flex-direction: column; /* Changed to column */
-  /* justify-content: space-between; */ /* Removed */
-  /* align-items: center; */
-  /* margin-top: 20px; */
 }

@@ -29,43 +29,78 @@ export default function InputAddress() {
 
   return (
     <div className={css.container}>
-      <input
-        type="text"
-        className={css.input}
-        placeholder="Страна"
-        value={country}
-        onChange={handleCapitalize(setCountry)}
-      />
-      <input
-        type="text"
-        className={css.input}
-        placeholder="Область"
-        value={region}
-        onChange={handleCapitalize(setRegion)}
-      />
-      <input
-        type="text"
-        className={css.input}
-        placeholder="Район"
-        value={district}
-        onChange={handleCapitalize(setDistrict)}
-      />
-      <input
-        type="text"
-        className={css.input}
-        placeholder="Теритареальная грамада"
-        value={community}
-        onChange={handleCapitalize(setCommunity)}
-      />
-      <input
-        type="text"
-        className={css.input}
-        placeholder="Населенный пункт"
-        value={settlement}
-        onChange={handleCapitalize(setSettlement)}
-      />
+      <div className={css.inputWrapper}>
+        <input
+          type="text"
+          className={css.input}
+          placeholder="Країна"
+          value={country}
+          onChange={handleCapitalize(setCountry)}
+        />
+        {country && (
+          <button className={css.clearButton} onClick={() => setCountry("")}>
+            X
+          </button>
+        )}
+      </div>
+      <div className={css.inputWrapper}>
+        <input
+          type="text"
+          className={css.input}
+          placeholder="Область"
+          value={region}
+          onChange={handleCapitalize(setRegion)}
+        />
+        {region && (
+          <button className={css.clearButton} onClick={() => setRegion("")}>
+            X
+          </button>
+        )}
+      </div>
+      <div className={css.inputWrapper}>
+        <input
+          type="text"
+          className={css.input}
+          placeholder="Район"
+          value={district}
+          onChange={handleCapitalize(setDistrict)}
+        />
+        {district && (
+          <button className={css.clearButton} onClick={() => setDistrict("")}>
+            X
+          </button>
+        )}
+      </div>
+      <div className={css.inputWrapper}>
+        <input
+          type="text"
+          className={css.input}
+          placeholder="Територіальна грамада"
+          value={community}
+          onChange={handleCapitalize(setCommunity)}
+        />
+        {community && (
+          <button className={css.clearButton} onClick={() => setCommunity("")}>
+            X
+          </button>
+        )}
+      </div>
+      <div className={css.inputWrapper}>
+        <input
+          type="text"
+          className={css.input}
+          placeholder="Населений пункт"
+          value={settlement}
+          onChange={handleCapitalize(setSettlement)}
+        />
+        {settlement && (
+          <button className={css.clearButton} onClick={() => setSettlement("")}>
+            X
+          </button>
+        )}
+      </div>
       <button className={css.button} onClick={() => getGeocode()}>
-        Get Geocode
+        Геокодувати
       </button>
     </div>
   );
