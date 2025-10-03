@@ -4,7 +4,7 @@
       200px,
       1fr
     ); /* минимальная ширина 200px, максимум — растягивается */
-  grid-template-rows: auto 0.55fr 1fr; /* header, and two rows of equal height */
+  grid-template-rows: auto 1fr 1fr; /* header, and two rows of equal height */
   grid-template-areas:
     "header header header"
     "map dataTop input"
