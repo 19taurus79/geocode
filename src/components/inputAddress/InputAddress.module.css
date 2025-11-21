@@ -1,3 +1,9 @@
+.container {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .input {
   padding: 10px 35px 10px 15px; /* Adjusted padding-right for the button */
   font-size: 16px;
